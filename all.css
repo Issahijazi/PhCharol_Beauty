@@ -650,4 +650,38 @@ footer {
         margin-top: 10px; /* Space above cart container */
     }
 }
+@media only screen and (max-width: 780px) {
+    .cart-dropdown {
+        width: 90vw; /* Use a larger width on small screens */
+        left: 5vw; /* Center it horizontally */
+        right: 0; /* Reset right to avoid overflow */
+    }
+
+    #cart-items {
+        padding: 10px; /* Add some padding inside the cart */
+    }
+
+    #cart-items li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align items to the start */
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd; /* Optional: adds a separator between items */
+        padding: 5px 0; /* Adds spacing between items */
+    }
+
+    #cart-items img {
+        width: 50px; /* Smaller image size for mobile */
+        height: 50px; /* Adjust height accordingly */
+        margin-right: 10px;
+    }
+
+    #cart-items .item-name {
+        font-size: 0.8rem; /* Smaller font size for item names */
+    }
+
+    #cart-items .-from-cart {
+        font-size: 0.8rem; /* Adjust size for remove button */
+    }
+}
 
