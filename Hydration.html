@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="all.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-ph">PH</span>
+            <span class="logo-charol">CHAROL</span> 
+        </div>
+        <button id="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Allitems.html">All Items</a></li>
+                <li class="contact-container">
+                    <a href="https://wa.me/96170347684" target="_blank">Contact</a>
+                </li>
+                <li class="search-container">
+                    <i class="fas fa-search" id="search-icon"></i>
+                    <input type="text" id="search-field" placeholder="Search...">
+                    <p id="search-message" class="search-message">Not found</p>
+                </li>
+                <li class="cart-container">
+                    <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                    <div id="cart-dropdown" class="cart-dropdown">
+                        <p id="cart-empty">No items added to the cart yet.</p>
+                        <ul id="cart-items"></ul>
+                        <button id="share-btn">Share Cart</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="items-section">
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Anti-cellulite.png" alt="Item Image">
+                    <h3>Body Anti-cellulite Cream</h3>
+                    <div class="price">$30.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        Apply morning and evening with upward strokes to cellulite-prone areas like thighs, hips, and buttocks. You'll feel a cooling sensation indicating the cream is working, giving you a slimmer, firmer, and younger appearance.</p>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Anti_blemish.png" alt="Item Image">
+                    <h3>Anti-Blemish Gel</h3>
+                    <div class="price">$35.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Treatment for Sensitive Skin
+                        Formulated with ultra-smoothing natural plant extracts, this treatment soothes and reduces redness.</p>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Body_creme.png" alt="Item Image">
+                    <h3>Body Cream</h3>
+                    <div class="price">$35.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This body treatment delivers pure hydration for satiny-soft skin, suitable for all tones year-round. 
+                    
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Caviar_serum.png" alt="Item Image">
+                    <h3>Caviar Serum Set</h3>
+                    <div class="price">$60.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Formulated for sensitive skin affected by hormonal changes and aging. It revitalizes and firms skin overnight, reducing wrinkles and shadows while restoring vibrancy. Promotes a brighter, more even complexion. Apply every morning to a cleansed face after toning lotion for ten days. Then switch to the diamond treatment for the next ten days.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Collagen.png" alt="Item Image">
+                    <h3>Collagen</h3>
+                    <div class="price">$30.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        Rich in vitamins B and C, this revitalizing formula offers amazing results without surgery or injections. Apply once daily to the face and neck, morning or evening.
+                        It's strongly advised not to use any 
+                        type of peeling or steam before usage.</div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Diamond.png" alt="Item Image">
+                    <h3>Diamond Serum </h3>
+                    <div class="price">$60.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Diamond serum provides your skin with ant -aging care, fade away freckles,
+                        sun age and dark spots with this unique brightening essence, smoothes, 
+                        refreshing and whitening.</div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="eye_contour_cream.png" alt="Item Image">
+                    <h3>Extra Firming Eye <br>
+                         Countour Cream</h3>
+                    <div class="price">$30.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        Nighttime is the most effective time to minimize wrinkles. This treatment reduces fine lines, wrinkles, and crow's feet while firming and toning the skin. Apply preferably in the evening.    
+                    
+                    
+                    </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Eye_contour_gel.png" alt="Item Image">
+                    <h3>Eye Countour Gel </h3>
+                    <div class="price">$36.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This non-oily gel can be used over makeup to keep eyes looking youthful. Suitable for sensitive eyes, it reduces puffiness and dark circles while moisturizing and toning eyelids for smooth makeup application.
+                    
+                    </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="eye_mask.png" alt="Item Image">
+                    <h3>Skin Smoothing<br> Eye Mask </h3>
+                    <div class="price">$17.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This fragrance-free cream smooths eye contours in minutes, suitable for all eye types. It reduces fatigue, puffiness, and dark circles, refreshing the area around the eyes.
+                    
+                    </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Eye_Serum.png" alt="Item Image">
+                    <h3>Eye Serum </h3>
+                    <div class="price">$35.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Designed for mature skin to promote firmer, younger-looking eye contours. This gentle, non-oily gel minimizes puffiness and dark circles, moisturizes, and reduces wrinkles. It relieves dryness and improves the appearance of dark circles and swelling. Apply daily to cleansed eyes by dotting a small amount of gel around the eyes and gently patting until dry.</div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="foot_lotion.png" alt="Item Image">
+                    <h3>Age Control Foot Lotion </h3>
+                    <div class="price">$19.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This foot lotion protects against weather conditions, minimizing age spots and preventing new ones. It deeply moisturizes and combats dryness.
+                    
+                    </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="hand_lotion.png" alt="Item Image">
+                    <h3>Age Control Hand Cream </h3>
+                    <div class="price">$20.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Keep your hands youthful by minimizing age spots and preventing new ones. This cream protects against dryness from external factors and deeply moisturizes. 
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="hydra-creme.png" alt="Item Image">
+                    <h3>Hydra Cream SPF 15 </h3>
+                    <div class="price">$25.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This lightweight, silky formula helps combat premature aging and shields against environmental damage and sun exposure, leaving skin smooth, luminous, and plump.
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="MU_remover.png" alt="Item Image">
+                    <h3>Eye Makeup Remover </h3>
+                    <div class="price">$16.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Formulated to be as gentle as eye lotions. Help clear away melanin and 
+                        color spots, prevent the formation of spots. 
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="multi-active-creme.png" alt="Item Image">
+                    <h3>Multi Active Cream SPF 15 </h3>
+                    <div class="price">$25.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>A powerful cream for early wrinkle control that boosts radiance, repairs skin layers, and provides revitalizing, moisturizing, and protective benefits with a satin finish.
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Night_creme.png" alt="Item Image">
+                    <h3>Anti-Wrinkle Night Cream </h3>
+                    <div class="price">$25.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        Replenishes skin overnight, providing firming, moisturizing, and illuminating benefits while reducing the appearance of wrinkles and shadows for a vibrant complexion.
+                        
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="perl_creme.png" alt="Item Image">
+                    <h3>Brightening Pearl Day 
+                        Cream </h3>
+                    <div class="price">$30.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This brightening pearl day cream refreshes and protects your skin while reducing dark spots and freckles, leaving your face glowing.
+                        
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Serum.png" alt="Item Image">
+                    <h3>Serum </h3>
+                    <div class="price">$30.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This serum regenerates cells, lifting and renewing skin. With daily use, it firms and smooths while reducing fine lines and wrinkles.
+
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Sunscreen.png" alt="Item Image">
+                    <h3>UV Plus Protective Day Screen
+                        SPF 40 </h3>
+                    <div class="price">$25.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This ultra-protective day screen shields skin from premature aging, sensitivity, and dark spots. With White Tea Extract, it blocks pollution and free radicals. Its lightweight texture feels invisible on the skin.
+
+                        </div>
+            </div>
+        </div>
+        
+
+        <!-- Repeat similar item-card divs for other items -->
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Beauty Items Store. All Rights Reserved.</p>
+        <div class="contact-info">
+            <a href="https://www.instagram.com/phcharol.phroc.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:phcharol.spain@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/96170347684" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <p>HK International Marketing Group LTD / National Marketing</p>
+    </footer>
+    
+</body>
+<script src="All.js"></script>
+</html>

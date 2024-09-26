@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="AllItems.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- <img src="../Photos/Lgo.png" alt="Beauty Items Logo"> -->
+            <span class="logo-ph">PH</span>
+            <span class="logo-charol">CHAROL</span> 
+
+        </div>
+        <button id="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Allitems.html">All Items</a></li>
+                <li class="contact-container">
+                    <a href="https://wa.me/96170347684" target="_blank">Contact</a>
+                </li>
+                <li class="search-container">
+                    <i class="fas fa-search" id="search-icon"></i>
+                    <input type="text" id="search-field" placeholder="Search...">
+                    <p id="search-message" class="search-message">Not found</p>
+                </li>
+                <li class="cart-container">
+                    <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                    <div id="cart-dropdown" class="cart-dropdown">
+                        <p id="cart-empty">No items added to the cart yet.</p>
+                        <ul id="cart-items"></ul>
+                        <button id="share-btn">Share Cart</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="items-section">
+        <div class="section-title" id="beauty-glam">Cleaners & Toners</div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="foaming_cleanse.png" alt="Item Image">
+                    <h3>Gentle Foaming Cleanser</h3>
+                    <div class="price">$20.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This gentle foaming cleanser cleans deeply, removes bacteria, reduces pimples, and soothes irritation. It keeps your skin soft, boosts skin health, and promotes better circulation for a clearer, healthier look
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="cleansing_gel.png" alt="Item Image">
+                    <h3>Purifying Cleansing Gel</h3>
+                    <div class="price">$18.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span> This purifying gel effectively traps impurities and dissolves excess oil, providing an intensive makeup removal and deep cleansing action. It leaves the skin feeling refreshed and thoroughly clean.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="toning_lotion.png" alt="Item Image">
+                    <h3>Extra Comfort Toning Lotion</h3>
+                    <div class="price">$20.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span> This oil-free toning lotion is perfect for oily skin, tightening pores and refining texture. It refreshes, reduces shine, and gives a matte finish.</p>
+                    
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="section-title" id="beauty-glam">Exfoliants & Peels</div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="facial_peeling.png" alt="Item Image">
+                    <h3>Gentle Facial Peeling</h3>
+                    <div class="price">$18.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span> 
+                        This product is ideal for sensitive skin. It absorbs impurities, renews the skin’s surface, and helps maintain a youthful look. With regular use, it improves skin’s ability to breathe.</p>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="exfoliating scrub.png" alt="Item Image">
+                    <h3>Exfoliating Body Scrub</h3>
+                    <div class="price">$20.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span>
+                        This gentle scrub has a smooth, particle-free texture that exfoliates and cleans while stimulating cell renewal. It's effective on elbows, knees, heels, and arms, and is perfect for sensitive skin. 
+                       
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title" id="beauty-glam">Masks</div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="anti-wrinkles.png" alt="Item Image">
+                    <h3>Anti-Wrinkle Mask</h3>
+                    <div class="price">$18.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span> This mask is meant to cleanse exfoliate and unclog pores, regular 
+                        use reduce wrinkles, increase immunity, controls pigmentation 
+                        and gives your skin and amazing texture.
+                </div>
+            </div>
+        </div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="plant-mask.png" alt="Item Image">
+                    <h3>Aromatic Plant Purifying Mask</h3>
+                    <div class="price">$20.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span>
+                        This creamy mask boosts radiance, purifies, balances, and tones the skin. It hydrates with aromatic plants and reduces signs of stress and fatigue.
+                        
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title" id="beauty-glam">Moisturizers & Creams</div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="hydra-creme.png" alt="Item Image">
+                    <h3>Hydra Cream SPF 15 </h3>
+                    <div class="price">$25.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This lightweight, silky formula helps combat premature aging and shields against environmental damage and sun exposure, leaving skin smooth, luminous, and plump.
+                        
+                    </div>
+            </div>
+        </div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Night_creme.png" alt="Item Image">
+                    <h3>Anti-Wrinkle Night Cream </h3>
+                    <div class="price">$25.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        Replenishes skin overnight, providing firming, moisturizing, and illuminating benefits while reducing the appearance of wrinkles and shadows for a vibrant complexion.
+                       
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="multi-active-creme.png" alt="Item Image">
+                    <h3>Multi Active Cream SPF 15 </h3>
+                    <div class="price">$25.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        A powerful cream for early wrinkle control that boosts radiance, repairs skin layers, and provides revitalizing, moisturizing, and protective benefits with a satin finish.
+                        </div>
+            </div>
+        </div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="perl_creme.png" alt="Item Image">
+                    <h3>Brightening Pearl Day 
+                        Cream </h3>
+                    <div class="price">$30.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This brightening pearl day cream refreshes and protects your skin while reducing dark spots and freckles, leaving your face glowing.
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Collagen.png" alt="Item Image">
+                    <h3>Collagen</h3>
+                    <div class="price">$30.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        Rich in vitamins B and C, this revitalizing formula offers amazing results without surgery or injections. Apply once daily to the face and neck, morning or evening.
+                         It's strongly advised not to use any 
+                        type of peeling or steam before usage.</div>
+            </div>
+        </div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Anti-cellulite.png" alt="Item Image">
+                    <h3>Body Anti-cellulite Cream</h3>
+                    <div class="price">$30.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        Apply morning and evening with upward strokes to cellulite-prone areas like thighs, hips, and buttocks. You'll feel a cooling sensation indicating the cream is working, giving you a slimmer, firmer, and younger appearance.
+                    
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Body_creme.png" alt="Item Image">
+                    <h3>Body Cream</h3>
+                    <div class="price">$35.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This body treatment delivers pure hydration for satiny-soft skin, suitable for all tones year-round. 
+                    
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="hand_lotion.png" alt="Item Image">
+                    <h3>Age Control Hand Cream </h3>
+                    <div class="price">$20.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        Keep your hands youthful by minimizing age spots and preventing new ones. This cream protects against dryness from external factors and deeply moisturizes.  
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="foot_lotion.png" alt="Item Image">
+                    <h3>Age Control Foot Lotion </h3>
+                    <div class="price">$19.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This foot lotion protects against weather conditions, minimizing age spots and preventing new ones. It deeply moisturizes and combats dryness.
+                    </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Sunscreen.png" alt="Item Image">
+                    <h3>UV Plus Protective Day Screen
+                        SPF 40 </h3>
+                    <div class="price">$25.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This ultra-protective day screen shields skin from premature aging, sensitivity, and dark spots. With White Tea Extract, it blocks pollution and free radicals. Its lightweight texture feels invisible on the skin.
+
+
+                        </div>
+            </div>
+        </div>
+        
+        <div class="section-title" id="beauty-glam">Serum & Treatments</div> 
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="toning_lotion.png" alt="Item Image">
+                    <h3>Serum</h3>
+                    <div class="price">$30.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span> 
+                        This serum regenerates cells, lifting and renewing skin. With daily use, it firms and smooths while reducing fine lines and wrinkles.
+
+                </div>
+            </div>
+        </div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Caviar_serum.png" alt="Item Image">
+                    <h3>Caviar Serum Set</h3>
+                    <div class="price">$60.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Formulated for sensitive skin affected by hormonal changes and aging. It revitalizes and firms skin overnight, reducing wrinkles and shadows while restoring vibrancy. Promotes a brighter, more even complexion. Apply every morning to a cleansed face after toning lotion for ten days. Then switch to the diamond treatment for the next ten days.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Diamond.png" alt="Item Image">
+                    <h3>Diamond Serum </h3>
+                    <div class="price">$60.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Diamond serum provides your skin with ant -aging care, fade away freckles,
+                        sun age and dark spots with this unique brightening essence, smoothes, 
+                        refreshing and whitening.</div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Anti_blemish.png" alt="Item Image">
+                    <h3>Anti-Blemish Gel</h3>
+                    <div class="price">$35.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Treatment for Sensitive Skin
+                        Formulated with ultra-smoothing natural plant extracts, this treatment soothes and reduces redness. It helps minimize red spots, maintains skin balance, and improves elasticity.</p>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Eye_Serum.png" alt="Item Image">
+                    <h3>Eye Serum </h3>
+                    <div class="price">$35.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Designed for mature skin to promote firmer, younger-looking eye contours. This gentle, non-oily gel minimizes puffiness and dark circles, moisturizes, and reduces wrinkles. It relieves dryness and improves the appearance of dark circles and swelling. Apply daily to cleansed eyes by dotting a small amount of gel around the eyes and gently patting until dry.</div>
+            </div>
+        </div>
+
+      
+         
+        <div class="section-title" id="beauty-glam">Eye Care</div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="MU_remover.png" alt="Item Image">
+                    <h3>Eye Makeup Remover </h3>
+                    <div class="price">$16.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>Formulated to be as gentle as eye lotions. Help clear away melanin and 
+                        color spots, prevent the formation of spots.
+                        
+                        </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="eye_mask.png" alt="Item Image">
+                    <h3>Skin Smoothing<br> Eye Mask </h3>
+                    <div class="price">$17.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+
+                        This fragrance-free cream smooths eye contours in minutes, suitable for all eye types. It reduces fatigue, puffiness, and dark circles, refreshing the area around the eyes.
+                         </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="eye_contour_cream.png" alt="Item Image">
+                    <h3>Extra Firming Eye <br>
+                         Countour Cream</h3>
+                    <div class="price">$30.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        Nighttime is the most effective time to minimize wrinkles. This treatment reduces fine lines, wrinkles, and crow's feet while firming and toning the skin. 
+                    
+                    </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Eye_contour_gel.png" alt="Item Image">
+                    <h3>Eye Countour Gel </h3>
+                    <div class="price">$36.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Description:</span>
+                        This non-oily gel can be used over makeup to keep eyes looking youthful. Suitable for sensitive eyes, it reduces puffiness and dark circles while moisturizing and toning eyelids for smooth makeup application.
+                    
+                    </div>
+            </div>
+        </div>
+
+
+
+        <div class="section-title" id="beauty-glam">Makeup</div>
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Liquid_foundation.png" alt="Item Image">
+                    <h3 id="product-name">Liquid Foundation</h3>
+                    <div class="price">$13.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Sand" data-image="Liquid_foundation.png" style="background-color: #F0E68C;" title="Sand"></div>
+                        <div class="color-option" data-color="Peach" data-image="Liquid_foundation.png" style="background-color: #FFDAB9;" title="Peach"></div>
+                        <div class="color-option" data-color="Natural" data-image="Liquid_foundation.png" style="background-color: #D2B48C;" title="Natural"></div>
+                        <div class="color-option" data-color="Cappuccino" data-image="Liquid_foundation.png" style="background-color: #B38B6D;" title="Cappuccino"></div>
+                        <div class="color-option" data-color="Bronze" data-image="Liquid_foundation.png" style="background-color: #CD7F32;" title="Bronze"></div>
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="compact foundation_highlight.png" alt="Item Image">
+                    <h3 id="product-name">Compact Foundation</h3>
+                    <div class="price">$14.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Highlight" data-image="compact foundation_highlight.png" style="background-color: #B38B6D;" title="Highlight"></div>
+                        <div class="color-option" data-color="Natural" data-image="Compact_natural.png" style="background-color: #FFDAB9;" title="Natural"></div>
+                        <div class="color-option" data-color="Ivory" data-image="Compact_ivory.png" style="background-color: #cea17f;" title="Ivory"></div>
+                        
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Cpowder_PB.png" alt="Item Image">
+                    <h3 id="product-name">Compact Powder</h3>
+                    <div class="price">$15.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Pink-beige" data-image="Cpowder_PB.png" style="background-color: #B39283;" title="Pink Beige"></div>
+                        <div class="color-option" data-color="Sand" data-image="Cpowder_sand.png" style="background-color: #F0E68C;" title="Sand"></div>
+                        <div class="color-option" data-color="Matte-Bronze" data-image="Cpowder_MB.png" style="background-color: #CD7F32;" title="Matte Bronze"></div>
+                        <div class="color-option" data-color="Natural" data-image="Cpowder_nat.png" style="background-color: #FFDAB9;" title="Natural"></div>
+                        <div class="color-option" data-color="Dark-beige" data-image="Cpowder_DB.png" style="background-color: #A9957B;" title="Dark Beige"></div>
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="LoosePoweder_T.png" alt="Item Image">
+                    <h3 id="product-name">Loose Powder</h3>
+                    <div class="price">$16.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Tan" data-image="LoosePoweder_T.png" style="background-color: #B38B6D;" title="tan"></div>
+                        <div class="color-option" data-color="Light" data-image="LoosePowder_L.png" style="background-color: #FFDAB9;" title="light"></div>
+                        
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Camo_blusher_lp.png" alt="Item Image">
+                    <h3 id="product-name">Camouflage Blush</h3>
+                    <div class="price">$14.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Light-pink" data-image="Camo_blusher_lp.png" style="background-color: #FFB6C1;" title="Light Pink"></div>
+                        <div class="color-option" data-color="Shimmer-bronze" data-image="CB_SB.png" style="background-color: #CD7F32;" title="Shimmer Bronze"></div>
+                        <div class="color-option" data-color="Pink" data-image="CB_P.png" style="background-color: #FF69B4 ;" title="Pink"></div>
+                        <div class="color-option" data-color="Salmon" data-image="CB_Sal.png" style="background-color: #FA8072;" title="Salmon"></div>
+                        <div class="color-option" data-color="Orange" data-image="CB_O.png" style="background-color: #FFA500;" title="Orange"></div>
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="RC__DB.png" alt="Item Image">
+                    <h3 id="product-name">Repairing Concealer</h3>
+                    <div class="price">$15.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Sand" data-image="RC_sand.png" style="background-color: #F0E68C;" title="Sand"></div>
+                        <div class="color-option" data-color="Pink-beige" data-image="RC_pinkBeige.png" style="background-color: #B39283;" title="Pink Beige"></div>
+                        <div class="color-option" data-color="Natural" data-image="RC_nat.png" style="background-color: #FFDAB9;" title="Natural"></div>
+                        <div class="color-option" data-color="Dark-beige" data-image="RC__DB.png" style="background-color: #A9957B;" title="Dark Beige"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="MascaraVolume.png" alt="Item Image">
+                    <h3>Maskara</h3>
+                    <div class="price">$15.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span> 
+                        MASKARA VOLUME: M01 <br>
+                        MASKARA DOUBLE VOLUME : M02
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Liquid_EyeLiner.png" alt="Item Image">
+                    <h3>Liquid Eyeliner</h3>
+                    <div class="price">$11.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span> 
+                        BLACK LQ 01
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="kohl.png" alt="Item Image">
+                    <h3 id="product-name">Kohl Eyeliner</h3>
+                    <div class="price">$8.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="white" data-image="kohl.png" style="background-color: #FFFF; border: #000 solid 0.5px;" title="white"></div>
+                        <div class="color-option" data-color="Metalic-green" data-image="kohl.png" style="background-color: #003d00;" title="Metalic-green"></div>
+                        <div class="color-option" data-color="Metalic-bronze" data-image="kohl.png" style="background-color: #a97142;" title="Metalic-bronze"></div>
+                        <div class="color-option" data-color="Brown" data-image="kohl.png" style="background-color: #442803;" title="Brown"></div>
+                        <div class="color-option" data-color="Purple" data-image="kohl.png" style="background-color: purple;" title="Purple"></div>
+                        <div class="color-option" data-color="Metalic-silver" data-image="kohl.png" style="background-color: #AAA9AD;" title="Metalic-silver"></div>
+                        <div class="color-option" data-color="Metalic-blue" data-image="kohl.png" style="background-color: #150258;" title="Metalic-blue"></div>
+                        <div class="color-option" data-color="Black" data-image="kohl.png" style="background-color: #000;" title="Black"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Eyeshadow_W.png" alt="Item Image">
+                    <h3 id="product-name">Matte Eyeshadow</h3>
+                    <div class="price">$10.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="white" data-image="Eyeshadow_W.png" style="background-color: #FFFF; border: #000 solid 0.5px;" title="white"></div>
+                        <div class="color-option" data-color="Pink-beige" data-image="Eyeshadow_PB.png" style="background-color: #B39283;" title="Pink-beige"></div>
+                        <div class="color-option" data-color="Beige" data-image="Eyeshadow_Beige.png" style="background-color: #A9957B;" title="Beige"></div>
+                        <div class="color-option" data-color="Orange" data-image="Eyeshadow_orange.png" style="background-color: #f18d0a;" title="Orange"></div>
+                        <div class="color-option" data-color="Pink" data-image="Eyeshadow_pink.png" style="background-color: #dd5d8e;" title="Pink"></div>
+                        <div class="color-option" data-color="Purple" data-image="Eyeshadow_purple.png" style="background-color: purple;" title="Purple"></div>
+                        <div class="color-option" data-color="Pistachio" data-image="Eyeshadow_pistache.png" style="background-color: #93C572;" title="Pistachio"></div>
+                        <div class="color-option" data-color="Grey" data-image="Eyeshadow_grey.png" style="background-color: grey;" title="Grey"></div>
+                        <div class="color-option" data-color="Brown" data-image="Eyeshadow_brown.png" style="background-color: brown;" title="Brown"></div>
+                        <div class="color-option" data-color="Black" data-image="Eyeshadow_black.png" style="background-color: #000;" title="Black"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Lipgloss.png" alt="Item Image">
+                    <h3 id="product-name">Lip Gloss</h3>
+                    <div class="price">$6.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Transparent" data-image="Lipgloss.png" style="background-color: #FFff; border: #000 solid 0.5px;" title="Transparent"></div>
+                        <div class="color-option" data-color="Red" data-image="Lipgloss.png" style="background-color: red;" title="Red"></div>
+                        <div class="color-option" data-color="Pink" data-image="Lipgloss.png" style="background-color: #f37b8f;" title="Pink"></div>
+                        <div class="color-option" data-color="Fuchsia" data-image="Lipgloss.png" style="background-color: fuchsia;" title="Fuchsia"></div>
+                        <div class="color-option" data-color="Baby-Pink" data-image="Lipgloss.png" style="background-color: pink;" title="Baby-Pink"></div>
+                        <div class="color-option" data-color="Beige" data-image="Lipgloss.png" style="background-color: #A9957B ;" title="Beige"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Lip_Pink.png" alt="Item Image">
+                    <h3 id="product-name">Lipstic Pan</h3>
+                    <div class="price">$7.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Glossy-Fuchsia" data-image="Lipstick_GF.png" style="background-color: #ff00ff;" title="Glossy Fuchsia"></div>
+                        <div class="color-option" data-color="Pink-beige" data-image="Lipstick_PB.png" style="background-color: #B39283;" title="Pink-beige"></div>
+                        <div class="color-option" data-color="Matte-fuchsia" data-image="Lipstick_MF.png" style="background-color: #ff66ff;" title="Matte Fuchsia"></div>
+                        <div class="color-option" data-color="orange" data-image="Lipstick_O.png" style="background-color: orange;" title="Orange"></div>
+                        <div class="color-option" data-color="Pink" data-image="Lip_Pink.png" style="background-color: #f37b8f;" title="Pink"></div>
+                        <div class="color-option" data-color="Red" data-image="Lip_red.png" style="background-color: red;" title="Red"></div>
+                        <div class="color-option" data-color="Aubergine" data-image="Lip_aub.png" style="background-color: #472C4C;" title="Aubergine"></div>
+                        <div class="color-option" data-color="Beige" data-image="Lip_beige.png" style="background-color:#A9957B ;" title="Beige"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+
+         <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Lip_liner.png" alt="Item Image">
+                    <h3 id="product-name">Lip Contour</h3>
+                    <div class="price">$6.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Hot-red" data-image="Lip_liner.png" style="background-color: red;" title="Hot-red"></div>
+                        <div class="color-option" data-color="Plum" data-image="Lip_liner.png" style="background-color: #dda0c9;" title="Plum"></div>
+                        <div class="color-option" data-color="Natural" data-image="Lip_liner.png" style="background-color: pink;" title="Natural"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Beauty Items Store. All Rights Reserved.</p>
+        <div class="contact-info">
+            <a href="https://www.instagram.com/phcharol.phroc.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:phcharol.spain@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/96170347684" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <p>HK International Marketing Group LTD / National Marketing</p>
+    </footer>
+    
+</body>
+<script src="allitems.js"></script>
+</html>

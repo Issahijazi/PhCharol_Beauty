@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="all.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-ph">PH</span>
+            <span class="logo-charol">CHAROL</span> 
+        </div>
+        <button id="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Allitems.html">All Items</a></li>
+                <li class="contact-container">
+                    <a href="https://wa.me/96170347684" target="_blank">Contact</a>
+                </li>
+                <li class="search-container">
+                    <i class="fas fa-search" id="search-icon"></i>
+                    <input type="text" id="search-field" placeholder="Search...">
+                    <p id="search-message" class="search-message">Not found</p>
+                </li>
+                <li class="cart-container">
+                    <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                    <div id="cart-dropdown" class="cart-dropdown">
+                        <p id="cart-empty">No items added to the cart yet.</p>
+                        <ul id="cart-items"></ul>
+                        <button id="share-btn">Share Cart</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="items-section">
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Liquid_foundation.png" alt="Item Image">
+                    <h3 id="product-name">Liquid Foundation</h3>
+                    <div class="price">$13.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Sand" data-image="Liquid_foundation.png" style="background-color: #F0E68C;" title="Sand"></div>
+                        <div class="color-option" data-color="Peach" data-image="Liquid_foundation.png" style="background-color: #FFDAB9;" title="Peach"></div>
+                        <div class="color-option" data-color="Natural" data-image="Liquid_foundation.png" style="background-color: #D2B48C;" title="Natural"></div>
+                        <div class="color-option" data-color="Cappuccino" data-image="Liquid_foundation.png" style="background-color: #B38B6D;" title="Cappuccino"></div>
+                        <div class="color-option" data-color="Bronze" data-image="Liquid_foundation.png" style="background-color: #CD7F32;" title="Bronze"></div>
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="compact foundation_highlight.png" alt="Item Image">
+                    <h3 id="product-name">Compact Foundation</h3>
+                    <div class="price">$14.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Highlight" data-image="compact foundation_highlight.png" style="background-color: #B38B6D;" title="Highlight"></div>
+                        <div class="color-option" data-color="Natural" data-image="Compact_natural.png" style="background-color: #FFDAB9;" title="Natural"></div>
+                        <div class="color-option" data-color="Ivory" data-image="Compact_ivory.png" style="background-color: #cea17f;" title="Ivory"></div>
+                        
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Cpowder_PB.png" alt="Item Image">
+                    <h3 id="product-name">Compact Powder</h3>
+                    <div class="price">$15.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Pink-beige" data-image="Cpowder_PB.png" style="background-color: #B39283;" title="Pink Beige"></div>
+                        <div class="color-option" data-color="Sand" data-image="Cpowder_sand.png" style="background-color: #F0E68C;" title="Sand"></div>
+                        <div class="color-option" data-color="Matte-Bronze" data-image="Cpowder_MB.png" style="background-color: #CD7F32;" title="Matte Bronze"></div>
+                        <div class="color-option" data-color="Natural" data-image="Cpowder_nat.png" style="background-color: #FFDAB9;" title="Natural"></div>
+                        <div class="color-option" data-color="Dark-beige" data-image="Cpowder_DB.png" style="background-color: #A9957B;" title="Dark Beige"></div>
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="LoosePoweder_T.png" alt="Item Image">
+                    <h3 id="product-name">Loose Powder</h3>
+                    <div class="price">$16.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Tan" data-image="LoosePoweder_T.png" style="background-color: #B38B6D;" title="tan"></div>
+                        <div class="color-option" data-color="Light" data-image="LoosePowder_L.png" style="background-color: #FFDAB9;" title="light"></div>
+                        
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Camo_blusher_lp.png" alt="Item Image">
+                    <h3 id="product-name">Camouflage Blush</h3>
+                    <div class="price">$14.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Light-pink" data-image="Camo_blusher_lp.png" style="background-color: #FFB6C1;" title="Light Pink"></div>
+                        <div class="color-option" data-color="Shimmer-bronze" data-image="CB_SB.png" style="background-color: #CD7F32;" title="Shimmer Bronze"></div>
+                        <div class="color-option" data-color="Pink" data-image="CB_P.png" style="background-color: #FF69B4 ;" title="Pink"></div>
+                        <div class="color-option" data-color="Salmon" data-image="CB_Sal.png" style="background-color: #FA8072;" title="Salmon"></div>
+                        <div class="color-option" data-color="Orange" data-image="CB_O.png" style="background-color: #FFA500;" title="Orange"></div>
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="RC__DB.png" alt="Item Image">
+                    <h3 id="product-name">Repairing Concealer</h3>
+                    <div class="price">$15.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Sand" data-image="RC_sand.png" style="background-color: #F0E68C;" title="Sand"></div>
+                        <div class="color-option" data-color="Pink-beige" data-image="RC_pinkBeige.png" style="background-color: #B39283;" title="Pink Beige"></div>
+                        <div class="color-option" data-color="Natural" data-image="RC_nat.png" style="background-color: #FFDAB9;" title="Natural"></div>
+                        <div class="color-option" data-color="Dark-beige" data-image="RC__DB.png" style="background-color: #A9957B;" title="Dark Beige"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="MascaraVolume.png" alt="Item Image">
+                    <h3>Maskara</h3>
+                    <div class="price">$15.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span> 
+                        MASKARA VOLUME: M01 <br>
+                        MASKARA DOUBLE VOLUME : M02 </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Mascara_DoubleVolume.png" alt="Item Image">
+                    <h3>Mascara Double Volume</h3>
+                    <div class="price">$15.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span> 
+    
+                        MASKARA DOUBLE VOLUME : M02 </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    <img src="Liquid_EyeLiner.png" alt="Item Image">
+                    <h3>Liquid Eyeliner</h3>
+                    <div class="price">$11.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                </div>
+                <div class="item-back">
+                    <p> <span class="title">Description:</span> 
+                        BLACK LQ 01
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="kohl.png" alt="Item Image">
+                    <h3 id="product-name">Kohl Eyeliner</h3>
+                    <div class="price">$8.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="white" data-image="kohl.png" style="background-color: #FFFF; border: #000 solid 0.5px;" title="white"></div>
+                        <div class="color-option" data-color="Metalic-green" data-image="kohl.png" style="background-color: #003d00;" title="Metalic-green"></div>
+                        <div class="color-option" data-color="Metalic-bronze" data-image="kohl.png" style="background-color: #a97142;" title="Metalic-bronze"></div>
+                        <div class="color-option" data-color="Brown" data-image="kohl.png" style="background-color: #442803;" title="Brown"></div>
+                        <div class="color-option" data-color="Purple" data-image="kohl.png" style="background-color: purple;" title="Purple"></div>
+                        <div class="color-option" data-color="Metalic-silver" data-image="kohl.png" style="background-color: #AAA9AD;" title="Metalic-silver"></div>
+                        <div class="color-option" data-color="Metalic-blue" data-image="kohl.png" style="background-color: #150258;" title="Metalic-blue"></div>
+                        <div class="color-option" data-color="Black" data-image="kohl.png" style="background-color: #000;" title="Black"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Eyeshadow_W.png" alt="Item Image">
+                    <h3 id="product-name">Matte Eyeshadow</h3>
+                    <div class="price">$10.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="white" data-image="Eyeshadow_W.png" style="background-color: #FFFF; border: #000 solid 0.5px;" title="white"></div>
+                        <div class="color-option" data-color="Pink-beige" data-image="Eyeshadow_PB.png" style="background-color: #B39283;" title="Pink-beige"></div>
+                        <div class="color-option" data-color="Beige" data-image="Eyeshadow_Beige.png" style="background-color: #A9957B;" title="Beige"></div>
+                        <div class="color-option" data-color="Orange" data-image="Eyeshadow_orange.png" style="background-color: #f18d0a;" title="Orange"></div>
+                        <div class="color-option" data-color="Pink" data-image="Eyeshadow_pink.png" style="background-color: #dd5d8e;" title="Pink"></div>
+                        <div class="color-option" data-color="Purple" data-image="Eyeshadow_purple.png" style="background-color: purple;" title="Purple"></div>
+                        <div class="color-option" data-color="Pistachio" data-image="Eyeshadow_pistache.png" style="background-color: #93C572;" title="Pistachio"></div>
+                        <div class="color-option" data-color="Grey" data-image="Eyeshadow_grey.png" style="background-color: grey;" title="Grey"></div>
+                        <div class="color-option" data-color="Brown" data-image="Eyeshadow_brown.png" style="background-color: brown;" title="Brown"></div>
+                        <div class="color-option" data-color="Black" data-image="Eyeshadow_black.png" style="background-color: #000;" title="Black"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Lipgloss.png" alt="Item Image">
+                    <h3 id="product-name">Lip Gloss</h3>
+                    <div class="price">$6.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Transparent" data-image="Lipgloss.png" style="background-color: #FFff; border: #000 solid 0.5px;" title="Transparent"></div>
+                        <div class="color-option" data-color="Red" data-image="Lipgloss.png" style="background-color: red;" title="Red"></div>
+                        <div class="color-option" data-color="Pink" data-image="Lipgloss.png" style="background-color: #f37b8f;" title="Pink"></div>
+                        <div class="color-option" data-color="Fuchsia" data-image="Lipgloss.png" style="background-color: fuchsia;" title="Fuchsia"></div>
+                        <div class="color-option" data-color="Baby-Pink" data-image="Lipgloss.png" style="background-color: pink;" title="Baby-Pink"></div>
+                        <div class="color-option" data-color="Beige" data-image="Lipgloss.png" style="background-color: #A9957B ;" title="Beige"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Lip_Pink.png" alt="Item Image">
+                    <h3 id="product-name">Lipstic Pan</h3>
+                    <div class="price">$7.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Glossy-Fuchsia" data-image="Lipstick_GF.png" style="background-color: #ff00ff;" title="Glossy Fuchsia"></div>
+                        <div class="color-option" data-color="Pink-beige" data-image="Lipstick_PB.png" style="background-color: #B39283;" title="Pink-beige"></div>
+                        <div class="color-option" data-color="Matte-fuchsia" data-image="Lipstick_MF.png" style="background-color: #ff66ff;" title="Matte Fuchsia"></div>
+                        <div class="color-option" data-color="orange" data-image="Lipstick_O.png" style="background-color: orange;" title="Orange"></div>
+                        <div class="color-option" data-color="Pink" data-image="Lip_Pink.png" style="background-color: #f37b8f;" title="Pink"></div>
+                        <div class="color-option" data-color="Red" data-image="Lip_red.png" style="background-color: red;" title="Red"></div>
+                        <div class="color-option" data-color="Aubergine" data-image="Lip_aub.png" style="background-color: #472C4C;" title="Aubergine"></div>
+                        <div class="color-option" data-color="Beige" data-image="Lip_beige.png" style="background-color:#A9957B ;" title="Beige"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-inner">
+                <div class="item-front">
+                    
+                    <img id="product-image" src="Lip_liner.png" alt="Item Image">
+                    <h3 id="product-name">Lip Contour</h3>
+                    <div class="price">$6.00</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <span class="info-message">Double click for more info</span>
+                
+                </div>
+                <div class="item-back">
+                    <p><span class="title">Available Shades</span></p>
+                    <div class="color-options">
+                        <div class="color-option" data-color="Hot-red" data-image="Lip_liner.png" style="background-color: red;" title="Hot-red"></div>
+                        <div class="color-option" data-color="Plum" data-image="Lip_liner.png" style="background-color: #dda0c9;" title="Plum"></div>
+                        <div class="color-option" data-color="Natural" data-image="Lip_liner.png" style="background-color: pink;" title="Natural"></div>
+
+                    </div>
+                
+                </div>
+                
+            </div>
+        </div>
+        <!-- Repeat similar item-card divs for other items -->
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Beauty Items Store. All Rights Reserved.</p>
+        <div class="contact-info">
+            <a href="https://www.instagram.com/phcharol.phroc.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:phcharol.spain@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/96170347684" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <p>HK International Marketing Group LTD / National Marketing</p>
+    </footer>
+    
+</body>
+<script src="All.js"></script>
+</html>

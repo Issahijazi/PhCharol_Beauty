@@ -1,0 +1,725 @@
+/* General Styles for Body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color:#FFF0F5; /* Softer pink background */
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+body.loaded {
+    opacity: 1;
+}
+    /* Header styling */
+    header {
+        background-color: #ffffff; /* White header */
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: black;
+        
+    }
+    
+    /* Logo styling */
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+    }
+
+    .logo-ph {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: #2c2c2c; /* Dark Charcoal for PH */
+        letter-spacing: 0.1em;
+    }
+
+    .logo-charol {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        color: #FFB6C1; /* Rose Gold for CHAROL */
+        position: relative;
+    }
+    .logo-charol::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #FFB6C1; /* Rose Gold for underline */
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+    }
+
+    
+    /* Navigation styling */
+    nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        /* gap: 20px; */
+        
+    }
+    
+    nav ul li {
+        /* display: inline; */
+        margin: 0 0px;
+    }
+
+    nav ul li:first-child {
+        margin-left: 0; /* Remove left margin from the first item if needed */
+    }
+        
+        nav ul li:last-child {
+        margin-right: 0; /* Remove right margin from the last item if needed */
+     }
+    
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+    nav ul li {
+        display: inline;
+    
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 1.1rem;
+        padding: 10px 15px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    nav ul li a:hover {
+        background-color: #FFB6C1; /* Slightly darker pink on hover */
+        border-radius: 5px;
+    }
+    
+    /* Mobile view adjustments */
+    @media only screen and (max-width: 780px) {
+        header {
+            flex-direction: column; /* Stack logo and nav vertically */
+            align-items: flex-start;
+            padding: 10px;
+        }
+    
+        .logo img {
+            width: 100px; /* Reduce logo size for mobile */
+        }
+    
+        nav ul {
+            flex-direction: column; /* Stack navigation items vertically */
+            width: 100%; /* Full width for mobile */
+            padding: 0;
+            margin: 0;
+        }
+    
+        nav ul li {
+            margin: 5px 0; /* Space between nav items */
+        }
+    
+        nav ul li a {
+            font-size: 1rem; /* Adjust font size for better readability */
+            padding: 8px 10px; /* Adjust padding for smaller screens */
+            display: block;
+            text-align: left; /* Align text to the left */
+        }
+    }
+    
+    /* Tablet view adjustments */
+    @media only screen and (max-width: 1024px) and (min-width: 781px) {
+        header {
+            flex-direction: row;
+            align-items: center;
+        }
+    
+        .logo img {
+            width: 120px; /* Adjust logo size for tablet */
+        }
+    
+        nav ul {
+            gap: 15px; /* Adjust space between navigation items */
+        }
+    
+        nav ul li a {
+            font-size: 1rem; /* Adjust font size for tablet */
+        }
+    }
+    
+    nav ul li a:hover {
+    background-color: #FFB6C1; /* Slightly darker pink on hover */
+    border-radius: 5px;
+    }
+/* Style for the cart icon */
+#cart-icon {
+    font-size: 1.5rem;
+    position: relative;
+    cursor: pointer;
+    color: #000;
+}
+
+.cart-container {
+    position: relative;
+}
+
+/* Cart dropdown styling */
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: #FFF;
+    border: 2px solid #FFB6C1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.cart-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-dropdown p {
+    text-align: center;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+#share-btn {
+    background-color: #FFB6C1;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#share-btn:hover {
+    background-color: #FF69B4;
+}
+
+/* Show cart on click */
+.cart-container:hover .cart-dropdown {
+    display: block;
+}
+
+
+/* Item Section Styles */
+/* Item Section Styles */
+.items-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items horizontally and vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px;
+    margin: 0 auto; /* Center the section if needed */
+}
+
+/* Ensure item-card has margin and box-sizing set correctly */
+.item-card {
+    width: calc(25% - 20px); /* Adjust width to account for gap */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    perspective: 1000px; /* For flip effect */
+    margin-bottom: 20px; /* Space below each item */
+}
+
+
+.item-inner {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.item-card.flipped .item-inner {
+    transform: rotateY(180deg);
+}
+
+.item-front,
+.item-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.item-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    /* padding: 10px; */
+}
+
+.item-front img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.item-back {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    /* padding: 20px; */
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-back p {
+    margin: 0;
+    
+}
+
+/* Cart Styles */
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px; /* Set a maximum height if desired */
+    overflow-y: auto; /* Allow scrolling if items overflow */
+}
+
+#cart-items li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* Optional: adds a separator between items */
+    padding-bottom: 10px; /* Adds spacing between items */
+}
+
+#cart-items img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+#cart-items .item-name {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#cart-items .-from-cart {
+    background: none;
+    border: none;
+    color: #FF6F61; /* Color of the remove button */
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #FFB6C1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.contact-info a {
+    margin: 0 15px; /* Space between icons */
+    color: white;
+    font-size: 1.5rem; /* Size of the icons */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-info a:hover {
+    color: #ff69b4; /* Light pink color on hover */
+}
+
+.contact-info i {
+    margin-right: 0; /* Remove margin as there's no text next to icons */
+}
+/* Main color variable */
+:root {
+    --main-color: #FFB6C1; 
+}
+
+/* Item Name and Price Styling */
+.item-front h3 {
+    color: black;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.price {
+   color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Add some styling for the add-to-cart button */
+.add-to-cart {
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+    background-color: #FF69B4; /* Slightly darker pink on hover */
+    transform: scale(1.05); /* Slightly scale up button on hover */
+}
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1); /* Start at original size */
+        opacity: 1; /* Fully opaque */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly enlarged */
+        opacity: 0.8; /* Slightly transparent */
+    }
+    100% {
+        transform: scale(1); /* Return to original size */
+        opacity: 1; /* Fully opaque */
+    }
+}
+
+.add-to-cart:focus {
+    animation: buttonPulse 0.6s ease-in-out;
+}
+/* Style for the color circles container */
+.color-circles {
+    display: flex; /* Place circles in a row */
+    gap: 5px; /* Space between circles */
+    margin-bottom: 10px; /* Space between circles and button */
+}
+
+/* Style for each color circle */
+.color-circles .circle {
+    width: 20px; /* Size of the circles */
+    height: 20px; /* Size of the circles */
+    border-radius: 50%; /* Make the element circular */
+    display: inline-block; /* Ensure circles stay inline */
+    background-color: #ccc; /* Default color if not specified */
+}
+
+.info-message {
+    position: absolute;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    display: none; /* Hidden by default */
+    width: auto; /* Adjust width based on content */
+}
+.item-card:hover .info-message,
+.item-card:focus-within .info-message {
+    display: block; /* Show message on hover or focus */
+}
+
+.color-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 10px; /* Adjust the space between the circles */
+    justify-content: center;
+}
+
+.color-option {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    
+    
+}
+
+.color-option:hover {
+    border-color: #333; /* Highlight on hover */
+
+}
+
+
+
+
+@media only screen and (max-width: 780px){
+    /* .item-front h3{
+        font-size: 1.1rem;
+    }
+    .price {
+        font-size: 1.2rem;
+    }
+    .add-to-cart {
+        font-size: 0.8rem;
+        margin-top: 10x;
+        padding:7px;
+        
+       
+    } */
+
+    .item-card {
+        width: calc(25% - 20px); /* Adjust width to account for gap */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+        perspective: 1000px; /* For flip effect */
+        margin-bottom: 20px; /* Space below each item */
+    }
+    
+}
+
+    /* Adjust for smaller screens */
+@media only screen and (max-width: 780px) {
+        .item-front h3{
+            font-size: 1rem;
+            text-align: center;
+        }
+        .price {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .add-to-cart {
+            font-size: 0.8rem;
+            padding:7px;
+            
+           
+        }
+    
+        .item-card {
+            width: calc(50% - 20px); /* Two items per row */
+        }
+        .item-front img {
+            width: 100px; /* Adjust image size */
+            height: 100px;
+        }
+
+        header {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    /* Cart Dropdown Styling */
+    .cart-dropdown {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 40px;
+        background-color: #FFF;
+        border: 2px solid #FFB6C1;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        padding: 10px;
+        z-index: 1000;
+    }
+    
+    /* Show cart dropdown on hover */
+    .cart-container:hover .cart-dropdown {
+        display: block;
+    }
+    
+    /* Button Animations */
+    .add-to-cart:focus {
+        animation: buttonPulse 0.6s ease-in-out;
+    }
+
+    /* Make the header stack vertically */
+    
+
+    /* Adjust the logo size for smaller screens */
+    .logo img {
+        width: 100px; /* Reduce size for mobile */
+    }
+
+    /* Make the navigation take full width */
+    nav ul {
+        /* flex-direction: row; */
+        width: 100%;
+    }
+
+    /* Adjust navigation items */
+    nav ul li {
+        margin: 5px 0; /* Add margin between each nav item */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Adjust font size for better readability */
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+        display: block;
+        text-align: left; /* Align the text to the left */
+    }
+
+    /* Center the cart icon and make it mobile-friendly */
+    .cart-container {
+        align-self: center;
+        margin-top: 10px;
+    }
+
+
+
+.item-back p{
+    background-color: white;
+    border: #FFB6C1 solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-style: inset;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+    padding-bottom: 3px;
+}
+.search-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+}
+/* Optional: Highlight found item */
+.item-card.highlight {
+    border: 2px solid #FF69B4; /* Add a pink border for highlighted items */
+}
+@keyframes lightning {
+    0% {
+      border: 2px solid transparent;
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+      border: 2px solid #fff; /* White border for lightning effect */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glowing effect */
+    }
+    100% {
+      border: 2px solid transparent;
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  .flash {
+    animation: lightning 3s;
+  }
+  #menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Show the toggle button on mobile */
+@media only screen and (max-width: 780px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none; /* Hide menu by default on mobile */
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggle button is clicked */
+        align-items: center;
+    }
+}
+.section-title {
+    width: 100%;
+    height: 60px; /* Adjust as needed */
+    line-height: 60px; /* Vertically center text */
+    background-color: #f8f9fa; /* Use your website's background color */
+    color: #333; /* Text color */
+    font-size: 24px; /* Adjust font size */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #ccc; /* Optional: add a border */
+    margin-bottom: 20px; /* Space below the title */
+  }
+  
+  .section-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,0,150,0.3), rgba(0,204,255,0.3));
+    animation: moveBackground 4s infinite linear;
+  }
+  
+  @keyframes moveBackground {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+  .section-title {
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    color: black;
+}
+
+/* Lightning effect animation */
+@keyframes lightning {
+    0% {
+        color: black;
+        text-shadow: 0 0 0px rgba(255, 0, 0, 0);
+    }
+    50% {
+        color: #FFB6C1; /* Deep pink color */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        color: black;
+        text-shadow: 0 0 0px rgba(255, 0, 0, 0);
+    }
+}
+
+/* Apply animation to section titles */
+.section-title {
+    animation: lightning 3s infinite;
+}
+
+
+@media (max-width: 600px) {
+    .color-options {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns per row on smaller screens */
+    }
+    .item-back p{
+        font-size: 12px;
+    }
+    .item-card{
+        width: calc(100% - 20px);
+    }
+}

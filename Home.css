@@ -1,0 +1,526 @@
+
+/* General styles */
+body {
+margin: 0;
+font-family: 'Arial', sans-serif;
+background-color:#FFF0F5; /* Softer pink background */
+color: #333;
+
+/* added for transition */
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}
+body.loaded {
+    opacity: 1;
+}
+
+/* Header styling */
+header {
+background-color: #ffffff; /* White header */
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: black;
+}
+
+/* Logo */
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.logo-ph {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2c2c2c; /* Dark Charcoal for PH */
+    letter-spacing: 0.1em;
+}
+
+.logo-charol {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #FFB6C1; /* Rose Gold for CHAROL */
+    position: relative;
+}
+.logo-charol::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFB6C1; /* Rose Gold for underline */
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+nav ul {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+gap: 20px;
+}
+
+
+nav ul li {
+display: inline;
+}
+
+nav ul li a {
+text-decoration: none;
+color: rgb(0, 0, 0);
+font-size: 1.1rem;
+padding: 10px 15px;
+transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+background-color: #FFB6C1; /* Slightly darker pink on hover */
+border-radius: 5px;
+}
+
+.hero {
+display: flex;
+align-items: center;
+justify-content: center; /* Center the content horizontally */
+height: 400px; /* Adjust the height as needed */
+ /* Set the background image */
+ background: url('7.png') no-repeat center center;
+background-size: cover; /* Cover the entire section */
+color: white;
+padding: 0; /* Remove padding if needed to fit the background */
+position: relative; /* To position the text absolutely inside */
+}
+
+/* Adjust hero text styling */
+.hero-text {
+text-align: center;
+position: absolute; /* Position it absolutely to center it */
+top: 50%; /* Center vertically */
+left: 50%; /* Center horizontally */
+transform: translate(-50%, -50%); /* Adjust to center */
+padding: 0 20px; /* Padding around the text */
+}
+
+/* Continuous transparency animation */
+@keyframes fadeInOut {
+0% { opacity: 0; }
+50% { opacity: 1; }
+100% { opacity: 0; }
+}
+
+/* Apply the animation to the text */
+.hero-text h2 {
+font-size: 2.5rem;
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+margin: 0;
+animation: fadeInOut 3s ease-in-out infinite; /* Continuous animation */
+color: white; /* Ensure text color is visible */
+}
+
+/* Hover effect for the text */
+.hero-text h2:hover {
+cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Adjust hero image size */
+.hero-image {
+flex: 1;
+max-width: 50%;
+position: relative;
+overflow: hidden;
+display: flex;
+justify-content: center; /* Center image horizontally */
+transform: translateX(20px); /* Adjust this value as needed */
+}
+
+.hero-image img {
+width: 85%; /* Slightly larger image size */
+height: auto;
+object-fit: cover;
+transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover effect for the image */
+.hero-image:hover img {
+transform: scale(1.05); /* Slightly zooms in on hover */
+opacity: 0.7; /* Makes the image slightly transparent */
+}
+
+/* Three bordered sections */
+/* Adjust the categories for better spacing */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    flex-wrap: wrap; /* Allow wrapping of the items on smaller screens */
+    gap: 20px; /* Add space between category items */
+}
+
+/* Responsive styling for smaller devices */
+/* For screens smaller than 768px */
+
+
+.category {
+    width: 220px; /* Width of the category */
+    height: 275px; /* Height of the category */
+    border: 2px solid #FFB6C1; /* Reduced border size */
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+/* Adjust image size within category */
+.category img {
+    width: 100%; /* Full width */
+    height: 60%; /* Adjust height to be 60% of the border height */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Adjust text size and position */
+.category h3 {
+    margin: 0 0 13px 0;
+    font-size: 1.5rem;
+    color: #FFB6C1; /* Original color */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%; /* Adjust height to be 20% of the border height */
+    background: white; /* Background color of the text area */
+    line-height: 2rem; /* Center the text vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    animation: colorChange 2s ease-in-out infinite; /* Adjust duration as needed */
+}
+
+/* Lightning effect keyframes */
+@keyframes colorChange {
+    0% { color: #ffadc9; } /* Original color */
+    50% { color: #ff6f91; } /* Deeper color */
+    100% { color: #ffadc9; } /* Reset to original color */
+}
+
+/* Hover effect */
+.category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    cursor: pointer;
+}
+
+/* Animation for image on hover */
+.category:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+h4{
+    color: #FFB6C1;
+    text-decoration:none !important;
+    
+}
+a{
+    text-decoration: none;
+}
+
+/* About Us Section Styling */
+.about-us {
+    max-width: 900px; /* Limits the width of the section */
+    margin: 50px auto; /* Center the section horizontally and add top/bottom margin */
+    padding: 30px;
+    text-align: center; /* Center-align the text */
+    background-color: #FFF; /* Soft pink background to complement the site's color scheme  #FFF0F5*/
+    border-radius: 10px; /* Rounded corners for a polished look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-us h2 {
+    color: #FFB6C1; /* Matches the site's theme */
+    font-size: 2rem; /* Larger font size for the heading */
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    color: #333; /* Neutral text color for readability */
+    font-size: 1.1rem; /* Slightly larger font for easy reading */
+    line-height: 1.8; /* Spacing between lines */
+    margin-bottom: 15px;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #FFB6C1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-info a {
+    margin: 0 15px; /* Space between icons */
+    color: white;
+    font-size: 1.5rem; /* Size of the icons */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-info a:hover {
+    color: #ff69b4; /* Light pink color on hover */
+}
+
+.contact-info i {
+    margin-right: 0; /* Remove margin as there's no text next to icons */
+}
+
+
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 780px){
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .logo img {
+        width: 100px; /* Reduce size for mobile */
+    }
+
+    /* Make the navigation take full width */
+    nav ul {
+        /* flex-direction: row; */
+        width: 100%;
+    }
+
+    /* Adjust navigation items */
+    nav ul li {
+        margin: 5px 0; /* Add margin between each nav item */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Adjust font size for better readability */
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+        display: block;
+        text-align: left; /* Align the text to the left */
+    }
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        width: 100%;
+       
+
+    }
+
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 100px; /* Reduce size for mobile */
+    }
+
+
+    nav ul.active {
+        display: flex; /* Show menu when active */
+    }
+
+
+    nav ul li {
+        text-align: center; /* Center links in mobile view */
+        margin: 5px 0;
+    
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Adjust font size for better readability */
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+        display: block;
+        text-align: left;
+        
+    }
+
+    nav ul li a:hover {
+        background-color: #FFB6C1;
+    }
+
+    
+
+    
+}
+
+
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: 300px; /* Adjust the height */
+        background-size:auto;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem; /* Reduce text size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 250px; /* Further reduce height for very small screens */
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem; /* Even smaller font size for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .categories {
+        display: grid;
+        grid-template-columns: 1fr; /* One item per row */
+        padding: 10px; /* Reduce padding */
+       
+    }
+
+    .category {
+        width: 50%; 
+        justify-self: center;
+        /* height: auto; */
+    }
+
+    .category img {
+        height: auto; /* Adjust height based on content */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        padding: 20px;
+        font-size: 1rem; /* Smaller font for mobile */
+    }
+
+    .about-us h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.9rem; /* Adjust font size */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .contact-info a {
+        font-size: 1.2rem; /* Smaller icons */
+        margin: 0 10px; /* Reduce space between icons */
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    
+    header {
+        display: flex;
+        flex-direction: column; /* Stack logo and nav vertically */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 100px; /* Reduce logo size for mobile */
+    }
+
+    #menu-toggle {
+        display: block;
+        
+        
+    }
+
+    /* nav ul {
+        display: none; /* Hide menu by default on mobile 
+    } */
+
+   
+
+    nav ul {
+        display: none;
+        flex-direction: column; /* Stack navigation items vertically */
+        width: 100%; /* Full width for mobile */
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggle button is clicked */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Space between nav items */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Adjust font size for better readability */
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+        display: block;
+        text-align: left; /* Align text to the left */
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 781px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 120px; /* Adjust logo size for tablet */
+    }
+
+    nav ul {
+        gap: 15px; /* Adjust space between navigation items */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Adjust font size for tablet */
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .category{
+        width: 200px;
+        height: 265px;
+    }
+
+    .category h3{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+}
+
