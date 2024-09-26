@@ -423,6 +423,8 @@ footer {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    text-decoration:none;
+    color:black;
 }
 
 
@@ -538,7 +540,8 @@ footer {
 
     #menu-toggle {
         display: block;
-        
+        text-decoration:none;
+        color:black;
         
     }
 
