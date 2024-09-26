@@ -635,12 +635,16 @@ footer {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    text-decoration:none;
+    color:black;
 }
 
 /* Show the toggle button on mobile */
 @media only screen and (max-width: 780px) {
     #menu-toggle {
         display: block;
+        text-decoration:none;
+        color:black;
     }
 
     nav ul {
