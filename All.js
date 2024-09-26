@@ -163,6 +163,60 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+    // Function to add item to the cart
+function addToCart(itemName, itemPrice, itemImageSrc) {
+    // Get current cart items from localStorage
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    // Add the new item
+    cartItems.push({ name: itemName, price: itemPrice, image: itemImageSrc });
+    // Save updated cart back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+}
+
+// Function to display cart items
+function displayCartItems() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartList = document.getElementById('cart-items');
+    cartList.innerHTML = ''; // Clear existing items
+
+    cartItems.forEach(item => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <span class="item-name">${item.name}</span>
+            <span class="item-price">${item.price}</span>
+            <button class="remove-from-cart" onclick="removeFromCart('${item.name}')">Remove</button>
+        `;
+        cartList.appendChild(newItem);
+    });
+}
+
+// Function to remove item from cart
+function removeFromCart(itemName) {
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    cartItems = cartItems.filter(item => item.name !== itemName); // Filter out the item to remove
+    localStorage.setItem('cart', JSON.stringify(cartItems)); // Save updated cart
+    displayCartItems(); // Refresh the displayed cart
+}
+
+// Event listener for "Add to Cart" buttons
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const itemCard = event.target.closest('.item-card');
+        const itemName = itemCard.querySelector('.item-name').innerText;
+        const itemPrice = itemCard.querySelector('.price').innerText;
+        const itemImageSrc = itemCard.querySelector('img').src;
+
+        addToCart(itemName, itemPrice, itemImageSrc); // Call function to add item
+        displayCartItems(); // Update displayed cart items
+    });
+});
+
+// Load cart items on page load
+window.onload = function() {
+    displayCartItems();
+};
+
 });
 
 function toggleMenu() {
