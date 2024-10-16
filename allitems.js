@@ -293,3 +293,9 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
+
+document.querySelectorAll('.item-card').forEach(card => {
+    card.addEventListener('dblclick', () => {
+        card.classList.toggle('flipped');
+    });
+});
