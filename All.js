@@ -293,3 +293,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.querySelectorAll('.item-card').forEach(card => {
+    card.addEventListener('dblclick', () => {
+        card.classList.toggle('flipped');
+    });
+});
