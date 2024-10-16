@@ -476,7 +476,7 @@ footer {
         }
         .cart-dropdown {
             display: none;
-            position: absolute;
+            position: relative;
             right: 0;
             top: 40px;
             background-color: #FFF;
