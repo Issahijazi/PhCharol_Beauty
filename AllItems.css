@@ -18,7 +18,6 @@ body.loaded {
         justify-content: space-between;
         align-items: center;
         color: black;
-        
     }
     
     /* Logo styling */
@@ -52,43 +51,19 @@ body.loaded {
         bottom: -6px;
         left: 0;
     }
-
-    
     /* Navigation styling */
     nav ul {
         display: flex;
         list-style: none;
         margin: 0;
         padding: 0;
-        /* gap: 20px; */
-        
-    }
-    
-    nav ul li {
-        /* display: inline; */
-        margin: 0 0px;
-    }
-
-    nav ul li:first-child {
-        margin-left: 0; /* Remove left margin from the first item if needed */
-    }
-        
-        nav ul li:last-child {
-        margin-right: 0; /* Remove right margin from the last item if needed */
-     }
-    
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
         gap: 20px;
     }
+    
     nav ul li {
         display: inline;
-    
     }
-
+    
     nav ul li a {
         text-decoration: none;
         color: rgb(0, 0, 0);
@@ -101,7 +76,6 @@ body.loaded {
         background-color: #FFB6C1; /* Slightly darker pink on hover */
         border-radius: 5px;
     }
-    
     /* Mobile view adjustments */
     @media only screen and (max-width: 780px) {
         header {
@@ -470,29 +444,6 @@ footer {
 
 
 
-@media only screen and (max-width: 780px){
-    /* .item-front h3{
-        font-size: 1.1rem;
-    }
-    .price {
-        font-size: 1.2rem;
-    }
-    .add-to-cart {
-        font-size: 0.8rem;
-        margin-top: 10x;
-        padding:7px;
-        
-       
-    } */
-
-    .item-card {
-        width: calc(25% - 20px); /* Adjust width to account for gap */
-        box-sizing: border-box; /* Include padding and border in element's total width and height */
-        perspective: 1000px; /* For flip effect */
-        margin-bottom: 20px; /* Space below each item */
-    }
-    
-}
 
     /* Adjust for smaller screens */
 @media only screen and (max-width: 780px) {
@@ -523,67 +474,99 @@ footer {
             flex-direction: column;
             align-items: center;
         }
+        .cart-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            background-color: #FFF;
+            border: 2px solid #FFB6C1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 10px;
+            z-index: 1000;
+        }
+        
+        .cart-dropdown ul {
+            display: flex; /* Change to flex for horizontal alignment */
+            flex-wrap: wrap; /* Allow items to wrap if they overflow */
+            gap: 10px; /* Add some space between items */
+        }
+        
+        .cart-dropdown li {
+            display: flex;
+            flex-direction: column; /* Keeps the content (image, name, price) inside each item stacked */
+            align-items: center;
+            width: 120px; /* Adjust width as needed for each item */
+        }
+        
+        .cart-dropdown p {
+            text-align: center;
+            color: #333;
+            font-size: 0.9rem;
+        }
+        
+        #share-btn {
+            background-color: #FFB6C1;
+            border: none;
+            color: white;
+            width: 100%;
+            padding: 5px 0;
+            font-size: 1rem;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        #share-btn:hover {
+            background-color: #FF69B4;
+        }
+        
+        /* Show cart on click */
+        .cart-container:hover .cart-dropdown {
+            display: block;
+        }
+        
+        
+        /* Button Animations */
+        .add-to-cart:focus {
+            animation: buttonPulse 0.6s ease-in-out;
+        }
+    
+        /* Make the header stack vertically */
+        
+    
+        /* Adjust the logo size for smaller screens */
+        .logo img {
+            width: 100px; /* Reduce size for mobile */
+        }
+    
+        /* Make the navigation take full width */
+        nav ul {
+            /* flex-direction: row; */
+            width: 100%;
+        }
+    
+        /* Adjust navigation items */
+        nav ul li {
+            margin: 5px 0; /* Add margin between each nav item */
+        }
+    
+        nav ul li a {
+            font-size: 1rem; /* Adjust font size for better readability */
+            padding: 8px 10px; /* Adjust padding for smaller screens */
+            display: block;
+            text-align: left; /* Align the text to the left */
+        }
+    
+        /* Center the cart icon and make it mobile-friendly */
+        .cart-container {
+            align-self: center;
+            margin-top: 10px;
+        }
     }
     
-    /* Cart Dropdown Styling */
-    .cart-dropdown {
-        display: none;
-        position: absolute;
-        right: 0;
-        top: 40px;
-        background-color: #FFF;
-        border: 2px solid #FFB6C1;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 200px;
-        padding: 10px;
-        z-index: 1000;
-    }
-    
-    /* Show cart dropdown on hover */
-    .cart-container:hover .cart-dropdown {
-        display: block;
-    }
-    
-    /* Button Animations */
-    .add-to-cart:focus {
-        animation: buttonPulse 0.6s ease-in-out;
-    }
-
-    /* Make the header stack vertically */
-    
-
-    /* Adjust the logo size for smaller screens */
-    .logo img {
-        width: 100px; /* Reduce size for mobile */
-    }
-
-    /* Make the navigation take full width */
-    nav ul {
-        /* flex-direction: row; */
-        width: 100%;
-    }
-
-    /* Adjust navigation items */
-    nav ul li {
-        margin: 5px 0; /* Add margin between each nav item */
-    }
-
-    nav ul li a {
-        font-size: 1rem; /* Adjust font size for better readability */
-        padding: 8px 10px; /* Adjust padding for smaller screens */
-        display: block;
-        text-align: left; /* Align the text to the left */
-    }
-
-    /* Center the cart icon and make it mobile-friendly */
-    .cart-container {
-        align-self: center;
-        margin-top: 10px;
-    }
-
-
-
 .item-back p{
     background-color: white;
     border: #FFB6C1 solid 1px;
@@ -633,18 +616,19 @@ footer {
     display: none;
     background: none;
     border: none;
+    text-decoration: none;
     font-size: 1.5rem;
+    color: black;
     cursor: pointer;
-    text-decoration:none;
-    color:black;
+    z-index:1000;
 }
 
 /* Show the toggle button on mobile */
 @media only screen and (max-width: 780px) {
     #menu-toggle {
         display: block;
-        text-decoration:none;
-        color:black;
+        color: black;
+        text-decoration: none;
     }
 
     nav ul {
