@@ -423,8 +423,8 @@ footer {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    text-decoration:none;
-    color:black;
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -533,7 +533,18 @@ footer {
         align-items: center;
         padding: 10px;
     }
-
+    .cart-dropdown ul {
+        display: flex; /* Change to flex for horizontal alignment */
+        flex-wrap: wrap; /* Allow items to wrap if they overflow */
+        gap: 10px; /* Add some space between items */
+    }
+    
+    .cart-dropdown li {
+        display: flex;
+        flex-direction: column; /* Keeps the content (image, name, price) inside each item stacked */
+        align-items: center;
+        width: 120px; /* Adjust width as needed for each item */
+    }
     .logo img {
         width: 100px; /* Reduce logo size for mobile */
     }
@@ -541,7 +552,7 @@ footer {
     #menu-toggle {
         display: block;
         text-decoration:none;
-        color:black;
+        color: black;
         
     }
 
@@ -595,93 +606,3 @@ footer {
         font-size: 1rem; /* Adjust font size for tablet */
     }
 }
-/* Small screens adjustments for cart dropdown */
-@media only screen and (max-width: 780px) {
-    /* Adjust cart dropdown for small screens */
-    .cart-dropdown {
-        width: 90%; /* Adjust width to fit mobile screens */
-        top: 50px; /* Position dropdown slightly below the cart icon */
-        right: 5%; /* Center dropdown below cart icon */
-        padding: 10px; /* Adjust padding for better spacing */
-    }
-
-    /* Cart items in dropdown */
-    #cart-items li {
-        flex-direction: row; /* Align image and details side by side */
-        align-items: center; /* Center items vertically */
-        margin-bottom: 8px; /* Adjust spacing between items */
-    }
-
-    /* Cart item image */
-    #cart-items img {
-        width: 50px; /* Smaller image size for mobile */
-        height: 50px; /* Maintain aspect ratio */
-        margin-right: 10px; /* Space between image and item details */
-    }
-
-    /* Adjust font size and spacing for item names */
-    #cart-items .item-name {
-        font-size: 0.9rem; /* Smaller font size */
-        margin-right: 10px; /* Space between name and remove button */
-    }
-
-    /* Adjust font size for item price */
-    #cart-items .price {
-        font-size: 0.9rem; /* Smaller font size */
-    }
-
-    /* Smaller remove button */
-    #cart-items .remove-from-cart {
-        font-size: 0.8rem; /* Smaller font size */
-        color: #ff6f61; /* Keep consistent color */
-    }
-
-    /* Adjust share button for mobile */
-    #share-btn {
-        font-size: 0.9rem; /* Smaller font size */
-        padding: 5px 0; /* Adjust padding for mobile */
-    }
-
-    /* Ensure the cart icon and dropdown are centered on small screens */
-    .cart-container {
-        align-self: center; /* Center cart container */
-        width: 100%; /* Full width container */
-        text-align: center; /* Center align contents */
-        margin-top: 10px; /* Space above cart container */
-    }
-}
-@media only screen and (max-width: 780px) {
-    .cart-dropdown {
-        width: 90vw; /* Use a larger width on small screens */
-        left: 5vw; /* Center it horizontally */
-        right: 0; /* Reset right to avoid overflow */
-    }
-
-    #cart-items {
-        padding: 10px; /* Add some padding inside the cart */
-    }
-
-    #cart-items li {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; /* Align items to the start */
-        margin-bottom: 10px;
-        border-bottom: 1px solid #ddd; /* Optional: adds a separator between items */
-        padding: 5px 0; /* Adds spacing between items */
-    }
-
-    #cart-items img {
-        width: 50px; /* Smaller image size for mobile */
-        height: 50px; /* Adjust height accordingly */
-        margin-right: 10px;
-    }
-
-    #cart-items .item-name {
-        font-size: 0.8rem; /* Smaller font size for item names */
-    }
-
-    #cart-items .-from-cart {
-        font-size: 0.8rem; /* Adjust size for remove button */
-    }
-}
-
