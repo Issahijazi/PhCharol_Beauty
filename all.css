@@ -533,6 +533,9 @@ footer {
         align-items: center;
         padding: 10px;
     }
+     .cart-dropdown{
+        position:relative;
+    }
     .cart-dropdown ul {
         display: flex; /* Change to flex for horizontal alignment */
         flex-wrap: wrap; /* Allow items to wrap if they overflow */
