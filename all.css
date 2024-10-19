@@ -435,14 +435,18 @@ footer {
 }
 
 .color-option {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+    width: 35px; /* Adjust based on your design */
+    height: 35px; /* Adjust based on your design */
+    display: inline-block;
+    margin: 5px;
     cursor: pointer;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-    
-    
+    border: 2px solid transparent; /* Default border */
+    border-radius: 4px; /* Optional: rounded corners */
+}
+
+.color-option.selected {
+    border: 2px solid #FF69B4; /* Color for selected option (pink in this case) */
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5); /* Optional: glow effect */
 }
 
 .color-option:hover {
