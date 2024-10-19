@@ -186,10 +186,6 @@ body.loaded {
     background-color: #FF69B4;
 }
 
-/* Show cart on click */
-.cart-container:hover .cart-dropdown {
-    display: block;
-}
 
 
 /* Item Section Styles */
