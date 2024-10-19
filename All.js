@@ -73,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const itemName = card.querySelector('h3');   // Select the name within this card
         const originalItemName = itemName.innerText; // Store the original item name
 
-        colorOptions.forEach(option => {
+       colorOptions.forEach(option => {
             option.addEventListener('click', () => {
                 colorOptions.forEach(opt => opt.classList.remove('selected')); // Deselect all options
                 option.classList.add('selected'); // Select the clicked option
                 const newImageSrc = option.getAttribute('data-image'); // Get new image source from data attribute
                 const newColorName = option.getAttribute('data-color'); // Get new color name from data attribute
-
+        
                 // Update the image source and product name (with color)
                 itemImage.src = newImageSrc;
                 itemName.innerText = `${originalItemName} - ${newColorName}`; // Combine the original name with the selected color
