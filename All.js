@@ -290,33 +290,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Select all item cards
-    const itemCards = document.querySelectorAll('.item-card');
-
-    // Iterate over each card to handle the color option change
-    itemCards.forEach(card => {
-        const colorOptions = card.querySelectorAll('.color-option'); // Select color options within this card
-        const itemImage = card.querySelector('img'); // Select the image within this card
-        const itemName = card.querySelector('h3');   // Select the name within this card
-        const originalItemName = itemName.innerText; // Store the original item name
-
-        colorOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                const newImageSrc = option.getAttribute('data-image'); // Get new image source from data attribute
-                const newColorName = option.getAttribute('data-color'); // Get new color name from data attribute
-
-                // Update the image source and product name (with color)
-                itemImage.src = newImageSrc;
-                itemName.innerText = `${originalItemName} - ${newColorName}`; // Combine the original name with the selected color
-            });
-        });
-    });
+document.getElementById('cart-icon').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    const cartDropdown = document.getElementById('cart-dropdown');
+    // Toggle the visibility of the cart dropdown
+    if (cartDropdown.style.display === 'none' || cartDropdown.style.display === '') {
+        cartDropdown.style.display = 'block';
+    } else {
+        cartDropdown.style.display = 'none';
+    }
 });
 
+// Optional: Close the cart dropdown when clicking outside of it
+document.addEventListener('click', function(event) {
+    const cartIcon = document.getElementById('cart-icon');
+    const cartDropdown = document.getElementById('cart-dropdown');
 
-document.querySelectorAll('.item-card').forEach(card => {
-    card.addEventListener('dblclick', () => {
-        card.classList.toggle('flipped');
-    });
+    if (!cartIcon.contains(event.target) && !cartDropdown.contains(event.target)) {
+        cartDropdown.style.display = 'none';
+    }
+});
+
+// Prevent the cart from closing when clicking the 'X' to remove an item
+document.getElementById('cart-dropdown').addEventListener('click', function(event) {
+    event.stopPropagation(); // Stop the event from bubbling up to the parent
 });
