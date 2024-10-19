@@ -702,7 +702,7 @@ footer {
 
 @media (max-width: 600px) {
     .color-options {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns per row on smaller screens */
+        grid-template-columns: repeat(3, 1fr); /* 2 columns per row on smaller screens */
     }
     .item-back p{
         font-size: 12px;
