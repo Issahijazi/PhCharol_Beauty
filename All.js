@@ -16,17 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // Share cart on WhatsApp
     shareBtn.addEventListener('click', () => {
-        const cartItemsArray = JSON.parse(localStorage.getItem('cart')) || [];
-        
-        // Format each item in the cart with bold names and prices
-        const cartItemsText = cartItemsArray.map(item => `*${item.name}*: ${item.price}`).join('\n');
-    
-        const shareText = `Check out my cart:\n${cartItemsText}`;
-        const encodedText = encodeURIComponent(shareText);
-    
-        // Open WhatsApp share link
-        window.open(`https://wa.me/?text=${encodedText}`, '_blank');
-    });
+    const cartItemsText = Array.from(cartItems.children).map(item => {
+        const itemName = item.querySelector('.item-name').innerText;
+        const itemPrice = item.querySelector('.item-price').innerText;
+        return `*${itemName}* : ${itemPrice}`;
+    }).join('\n');
+
+    const shareText = `Check out my cart:\n\n${cartItemsText}`;
+    const encodedText = encodeURIComponent(shareText);
+    window.open(`https://wa.me/?text=${encodedText}`, '_blank');
+});
 
     // Add item to cart and save it in localStorage
     document.querySelectorAll('.add-to-cart').forEach(button => {
