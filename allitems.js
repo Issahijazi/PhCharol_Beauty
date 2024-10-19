@@ -319,3 +319,10 @@ document.addEventListener('click', function(event) {
         cartDropdown.style.display = 'none';
     }
 });
+
+// Prevent the cart from closing when clicking the 'X' to remove an item
+document.getElementById('cart-dropdown').addEventListener('click', function(event) {
+    event.stopPropagation(); // Stop the event from bubbling up to the parent
+});
+
+});
