@@ -299,3 +299,23 @@ document.querySelectorAll('.item-card').forEach(card => {
         card.classList.toggle('flipped');
     });
 });
+document.getElementById('cart-icon').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    const cartDropdown = document.getElementById('cart-dropdown');
+    // Toggle the visibility of the cart dropdown
+    if (cartDropdown.style.display === 'none' || cartDropdown.style.display === '') {
+        cartDropdown.style.display = 'block';
+    } else {
+        cartDropdown.style.display = 'none';
+    }
+});
+
+// Optional: Close the cart dropdown when clicking outside of it
+document.addEventListener('click', function(event) {
+    const cartIcon = document.getElementById('cart-icon');
+    const cartDropdown = document.getElementById('cart-dropdown');
+
+    if (!cartIcon.contains(event.target) && !cartDropdown.contains(event.target)) {
+        cartDropdown.style.display = 'none';
+    }
+});
